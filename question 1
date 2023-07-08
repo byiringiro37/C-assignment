@@ -1,0 +1,94 @@
+#include <iostream>
+#include <string>
+using namespace std;
+  int main() {
+  	
+  	int s,e,m;
+  	cout<<"Enter starting time"<<endl;
+  	cin>>s;
+  	cout<<"Enter ending time"<<endl;
+  	cin>>e;
+  	int d=e-s;
+  	
+  	
+    if (e>21 && e<=24 ) {
+  		
+  		if  (s>21 && s<24) {
+  			cout << "The money is:" <<d*500;
+		  }
+	     else if ( s>19 && s<=21) {
+	     	m=((e-21)*500)+((21-s)*1000);
+	     	cout<<"The money owed is "<<m<<endl;
+		 }
+		 
+		 else if (s>14 && s<=19) {
+		 	m=((19-s)*1500) + ((3*1000)) + ((e-21)*500);
+		  cout<<"The money owed is "<<m;
+		 }	   
+		 else if (s>7 && s<=14) {
+		 	m=((14-s)*1000) + ((5*1500)) + ((3*1000)) + ((e-21)*500);
+		  cout<<"The money owed is :"<<m;
+		 }
+		 else if ( s>0 && s<=7) {
+		 	m=((7-s)*500) + (7*1000) + ((5*1500)) + ((3*1000)) + ((e-21)*500);
+		  cout<<"The money owed is :"<<m;
+		 }
+	  }
+	   
+	  	if (e>19 && e<=21 ) {
+  		
+  		if  (s>19 && s<21) {
+  			cout<<"The money is "<<d*1000<<endl;
+		  }
+	     else if ( s>14 && s<=19) {
+	     	m=((e-19)*1000)+((19-s)*1500);
+	     	cout<<"The money is:"<<m<<endl;
+		 }
+		 
+		 else if (s>7 && s<=14) {
+		 	m=((14-s)*1000)+((5*1500))+((e-19)*1000);
+			  cout<<"The money owed is "<<m;  
+		 }	   
+		else if (s>0 && s<=7) {
+			m=(((7-s)*500)) + (7*1000) +((5*1500))+((e-19)*1000);
+			 cout<<"The money owed is "<<m; 
+		} 
+	  } 
+	  
+	  if (e>14 && e<=19) {
+	  	
+	    if (s>14 && s<=19) {
+	    	m=d*1500;
+	    	 cout<<"The money owed is "<<m;
+		}
+		
+		else if (s>7 && s<=14) {
+			m=((14-s)*1000) + ((e-14)*1500);
+			 cout<<"The money owed is "<<m;
+		}
+		else if (s>0 && s <=7) {
+			m=(((7-s)*500)) + ((7*1000)) + ((e-14)*1500);
+			 cout<<"The money owed is "<<m;
+		}
+	   
+	   }
+	   
+	   if(e>7 && e<=14) {
+	   	
+	   	if (s>7 && s <=14) {
+	   		m=d*1000;
+	   		 cout<<"The money owed is "<<m;
+		   }
+		else if (s>0 && s<=7) {
+			m=(((7-s)*500)) + ((e-7)*1000);
+			 cout<<"The money owed is "<<m;
+		}   
+	   }
+	   
+	   if((e>0 && e<=7) && (s>0 && s <=7)) {
+	   	m=d*500;
+	   	 cout<<"The money owed is"<<m;
+	   }
+	   
+	   return 0;
+}
